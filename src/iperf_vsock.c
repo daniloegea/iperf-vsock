@@ -89,7 +89,7 @@ iperf_vsock_init(struct iperf_test *test)
 
 #include <sys/socket.h>
 #include <sys/un.h>
-#include <linux/vm_sockets.h>
+#include <sys/vm_sockets.h>
 
 #include "net.h"
 #include "vsock.h"
@@ -125,9 +125,11 @@ vsock_sockaddr(const char *cid_str, int port, int listen, socklen_t *len)
 		svm->svm_family = AF_VSOCK;
 		svm->svm_cid = cid;
 		svm->svm_port = port;
+		/*
 		if (sibling) {
 			svm->svm_flags = VMADDR_FLAG_TO_HOST;
 		}
+		*/
 
 		return (struct sockaddr *)svm;
 	}

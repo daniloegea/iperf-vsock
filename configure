@@ -13547,9 +13547,9 @@ done
 fi
 
 # Check for VSOCK support
-for ac_header in linux/vm_sockets.h
+for ac_header in sys/vm_sockets.h
 do :
-  ac_fn_c_check_header_compile "$LINENO" "linux/vm_sockets.h" "ac_cv_header_linux_vm_sockets_h" "#ifdef HAVE_SYS_SOCKET_H
+  ac_fn_c_check_header_compile "$LINENO" "sys/vm_sockets.h" "ac_cv_header_linux_vm_sockets_h" "#ifdef HAVE_SYS_SOCKET_H
 #include <sys/socket.h>
 #endif
 

@@ -81,7 +81,7 @@
 #include "iperf_sctp.h"
 #endif /* HAVE_SCTP_H */
 #if defined(HAVE_VSOCK)
-#include <linux/vm_sockets.h>
+#include <sys/vm_sockets.h>
 #include "iperf_vsock.h"
 #endif /* HAVE_VSOCK */
 #include "timer.h"
